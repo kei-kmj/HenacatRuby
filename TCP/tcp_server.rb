@@ -27,10 +27,10 @@ class TcpServer
 
   # クライアントからのデータを受信する
   def recv
-    puts ' connected '
+    puts 'connected'
     # 受け取った内容をsever_recv.txtに書き込む
-    File.open(' server_recv.txt ', ' w ') do |f|
-      while line = @client.gets
+    File.open('server_recv.txt', 'w') do |f|
+      while (line = @client.gets)
         break if line.chomp == '0'
 
         f.write(line)
@@ -41,19 +41,19 @@ class TcpServer
   # クライアントにデータを送信する
   def send(_data)
     # server_send.txtの内容をクライアントにデータを送信する
-    File.open(' server_send.txt ', ' r ') do |f|
-      while line = f.gets
+    File.open('server_send.txt', 'r') do |f|
+      while (line = f.gets)
         @client.puts(line)
       end
     end
   end
 
   def close
+    puts 'connection closed'
     # クライアントから0を受け取ったら、クライアントとの接続を切断する
     @client.close
   end
 end
 
-# サーバーの起動
 server = TcpServer.new
 server.run

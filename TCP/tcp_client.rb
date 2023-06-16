@@ -21,7 +21,7 @@ class TcpClient
 
   def send
     request = "GET / HTTP/1.1\r\n"
-    request += "Host: www.yahoo.com\r\n"
+    request += ENV.fetch('HOST', nil)
     request += "Connection: close\r\n\r\n"
 
     @client.puts(request)
@@ -30,14 +30,14 @@ class TcpClient
   def recv
     # サーバーからのデータを受信する
     File.open('client_recv.txt', 'w') do |f|
-      while line = @client.gets
+      while (line = @client.gets)
         f.puts(line)
       end
     end
+    # @client.puts('0')
   end
 
   def close
-    # サーバーに0を送信する
     @client.close
   end
 end
