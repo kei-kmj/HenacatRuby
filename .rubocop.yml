@@ -6,3 +6,6 @@ Style/Documentation:
 
 Lint/AssignmentInCondition:
   Enabled: false
+
+Metrics/MethodLength:
+  Max: 20

@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "task": "Learn more about Ruby",
+    "completed": false
+  },
+  {
+    "id": 2,
+    "task": "Build a simple web server",
+    "completed": false
+  },
+  {
+    "id": 3,
+    "task": "Create a TODO application",
+    "completed": false
+  },
+  {
+    "id": 4,
+    "task": "post",
+    "completed": false
+  },
+  {
+    "id": 5,
+    "task": "GET",
+    "completed": false
+  },
+  {
+    "id": 6,
+    "task": "",
+    "completed": false
+  },
+  {
+    "id": 7,
+    "task": "POST",
+    "completed": false
+  },
+  {
+    "id": 8,
+    "task": "method",
+    "completed": false
+  },
+  {
+    "id": 9,
+    "task": "goemon",
+    "completed": false
+  },
+  {
+    "id": 10,
+    "task": "netti",
+    "completed": false
+  }
+]
